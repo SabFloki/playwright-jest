@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672123844185' stop='1672123849402'>
+    <name>All navigations of execution</name>
+    <title>All navigations of execution</title>
+    <test-cases>
+        <test-case start='1672123844186' status='passed' stop='1672123845510'>
+            <name>Dynamic ID</name>
+            <title>Dynamic ID</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672123845510' status='passed' stop='1672123849401'>
+            <name>Class Attribute</name>
+            <title>Class Attribute</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

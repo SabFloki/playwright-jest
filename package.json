@@ -1,0 +1,25 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "Playwright with Jest",
+  "main": "index.js",
+  "author": "Sab",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^27.5.1",
+    "jest-playwright-preset": "^1.7.0",
+    "playwright": "^1.29.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-report": "jest && allure generate --clean"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.0.13",
+    "@wdio/cli": "^8.0.13",
+    "allure-commandline": "^2.20.1",
+    "jasmine": "^4.5.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "jest-allure": "^0.1.3"
+  }
+}
