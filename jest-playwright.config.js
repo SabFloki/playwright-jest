@@ -9,6 +9,8 @@ module.exports = {
         headless: process.env.CI ? true : false,
         // If we want to have opened devtools from start
         devtools: false,
+        video: process.env.CI ? 'off' : 'on',
+        screenshots: process.env.CI ? 'off' : 'on'
     },
     reporters: process.env.CI ? [['junit', {
         outputFile: 'results.xml'
@@ -16,7 +18,7 @@ module.exports = {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: false,
         disableMochaHooks: true,
-        open: 'on-failure'
+        open: 'on-failure',
     }],
     onComplete: function () {
         const reportError = new Error('Could not generate Allure report')
