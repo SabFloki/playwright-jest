@@ -11,6 +11,7 @@
     "playwright": "^1.29.1"
   },
   "scripts": {
+    "postinstall": "npx playwright install",
     "test": "jest",
     "test-report": "jest && allure generate --clean"
   },

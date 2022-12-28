@@ -6,16 +6,18 @@ module.exports = {
     browsers: ['chromium', 'firefox', 'webkit'],
     launchOptions: {
         // If we want to run browsers in headless mode or not,
-        headless: true,
+        headless: process.env.CI ? true : false,
         // If we want to have opened devtools from start
         devtools: false,
     },
-    reporters: [
-        ['allure', {
-            outputDir: 'allure-results',
-            disableWebdriverStepsReporting: false,
-            disableMochaHooks: true,
-        }]],
+    reporters: process.env.CI ? [['junit', {
+        outputFile: 'results.xml'
+    }]] : ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableMochaHooks: true,
+        open: 'on-failure'
+    }],
     onComplete: function () {
         const reportError = new Error('Could not generate Allure report')
         const generation = allure(['generate', 'allure-results', '--clean'])
